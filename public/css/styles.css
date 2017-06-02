@@ -58,15 +58,16 @@ li {
 }
 .item1 {
   margin-right: 10px;
+  margin-left: 70px;
 }
 .item2 {
   margin-left: 10px;
+  margin-left: 70px;
 }
 
 .item3 {
-  width: 100%;
-  height: 35px;
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-left: 70px;
 }
 
 .item4 {

@@ -1,28 +1,30 @@
 <div class="container-fluid">
- <!--   <div class="title">
+    <!--   <div class="title">
         <h2><i class="fa fa-map-marker"></i><i class="fa fa-cab"></i><i class="fa fa-glass"></i></h2>
         <h2 style="margin-top: 5px;">Search for Bars Near You and RSVP</h2>
     </div> -->
 
     <div class="row title">
-            <div class="item4"> 
-                <h2><i class="fa fa-map-marker"></i><i class="fa fa-cab"></i><i class="fa fa-glass"></i></h2>
-                <h2 style="margin-top: 5px;">Search for Bars Near You and RSVP</h2>
-            </div>
-            <form class="form" ng-submit="getLocalBusinesses();">
-                 <div class="item1">
+        <div class="item4">
+            <h2><i class="fa fa-map-marker"></i><i class="fa fa-cab"></i><i class="fa fa-glass"></i></h2>
+            <h2 style="margin-top: 5px;">Search for Bars Near You and RSVP</h2>
+        </div>
+        <form ng-submit="getLocalBusinesses();">
+            <div class="item1">
                 <input type="text" class="form-control" ng-model="location" id="locationText" placeholder="Enter city or zipcode">
-                </div>
-                <div class="item2">
+            </div>
+            <div class="item2">
                 <button class="btn btn-primary">Search Local Bars</button>
-                </div>
+            </div>
+            <div class="item3">
                 <div ng-show="isLoggedIn">
                     <div ng-show="hasSearched" style="margin: 0px 0px 20px;">
                         <button ng-click="getPreviousSearch()" class="btn btn-warning">Get Previous Search</button>
                     </div>
                 </div>
-            </form>
-          <!--  <div class="item3"> 
+            </div>
+        </form>
+        <!--  <div class="item3"> 
                 <div ng-show="isLoggedIn">
                     <div ng-show="hasSearched" style="margin: 0px 0px 20px;">
                         <button ng-click="getPreviousSearch()" class="btn btn-warning">Get Previous Search</button>
