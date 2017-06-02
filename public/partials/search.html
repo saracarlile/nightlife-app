@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="title">
+        <h2><i class="fa fa-map-marker"></i><i class="fa fa-cab"></i><i class="fa fa-glass"></i></h2>
+        <h2 style="margin-top: 5px;">Search for Bars Near You and RSVP</h2>
+    </div>
+
+    <div class="row content">
+        <div class="col-sm-6">
+            <form class="form" ng-submit="getLocalBusinesses();">
+                <input type="text" class="form-control" ng-model="location" id="locationText" placeholder="Enter city or zipcode">
+                <button class="btn btn-primary move-right">Search Local Bars</button>
+            </form>
+        </div>
+    </div>
+    <div class="row content">
+        <div ng-show="isLoggedIn">
+            <div ng-show="hasSearched" style="margin: 0px 0px 20px;">
+                <button ng-click="getPreviousSearch()" class="btn btn-warning">Get Previous Search</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row content">
+        <div class="outer-square" ng-repeat="bar in bars">
+            <div class="inner-square">
+                <div class="item">
+                    <div>
+                        <img class="yelp-img img-responsive" ng-src="{{bar.image_url}}">
+                    </div>
+                    <div>
+                        <address>
+                            <strong>{{bar.name}}</strong><br> {{bar.location.address1}} {{bar.location.address2}}<br> {{bar.location.city}},
+                            {{bar.location.state}} {{bar.location.zip_code}} <br> Phone: {{bar.display_phone}} <br> Rating:
+                            {{bar.rating}}
+                            <br> Price: {{bar.price}} <br>
+                        </address>
+                        <div ng-show="isLoggedIn">
+                            <button ng-show="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-success">Remove RSVP</button>
+                            <button ng-hide="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-primary">RSVP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

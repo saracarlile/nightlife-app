@@ -1,0 +1,5 @@
+node_modules
+.bower-*
+notes.txt
+herokuinfo.txt
+Gruntfile.js

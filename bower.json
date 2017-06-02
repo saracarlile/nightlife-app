@@ -1,0 +1,9 @@
+{
+  "name": "codetutorial-mean-seed",
+  "dependencies": {
+    "angular": "latest",
+    "angular-route": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "ng-facebook": "^0.1.6"
+  }
+}

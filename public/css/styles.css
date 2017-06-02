@@ -1,0 +1,90 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #CCCCCC;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #B5B5B5;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar-default {
+    background-color: #B5B5B5;
+    border-color: #969696;
+}
+
+li {   
+    cursor: pointer;  /* fix FB login to have pointer cursor */
+    cursor: hand; 
+}
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.form {
+	display: flex;
+	flex-direction: row;
+}
+
+.yelp-img {
+    height: 185px;
+    width: 300px;
+    border: 2px solid #BDBDBD;; 
+    border-radius: 2px;
+}
+
+.results {
+    border: 2px solid #BDBDBD; 
+    border-radius: 2px;
+}
+
+.move-right {
+    margin-left: 15px;
+}
+
+.outer-square {
+    padding: 30px;
+}
+
+.inner-square {
+  height: 400px;
+  width: 400px;
+  background-color: #fff;
+  padding: 15px 22px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

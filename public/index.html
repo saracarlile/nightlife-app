@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nightlife Cordination App</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://use.fontawesome.com/bd2329c420.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/ng-facebook/ngFacebook.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainController.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body ng-app="myApp">
+    <nav class="navbar navbar-default" style="margin-bottom: 0px;" ng-controller="LoginCtrl">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <p>Nightlife Coordination</p>
+                </a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li style="margin: 15px 8px;" ng-show="isLoggedIn">{{welcomeMsg}}</li>
+                <li><a ng-click="login()" ng-hide="isLoggedIn">Log In with Facebook</a></li>
+                <li><a ng-click="logout()" ng-show="isLoggedIn">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+        <div ng-view></div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Powered by the Yelp Fusion API</p>
+            <p class="text-muted move-right">Source code on <a href="https://github.com/saracarlile/nightlife-app">GitHub</a></p>
+        </div>
+    </footer>
+    <div id="fb-root">
+    </div>
+</body>
