@@ -82,6 +82,7 @@ li {
 	display: flex;
 	flex-direction: row;
     width: 100%;
+    padding: 10px 45px;
 }
 
 .yelp-img {
