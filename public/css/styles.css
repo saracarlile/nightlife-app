@@ -39,7 +39,7 @@ li {
 }
 
 .item1 {
-  width: 58%;
+  width: 65%;
   /* Modified */
   height: 35px;
   background: #4add69;
@@ -47,7 +47,7 @@ li {
 
 }
 .item2 {
-  width: 38%;
+  width: 32%;
   /* Modified */
   height: 35px;
   background: #4add69;
@@ -79,6 +79,7 @@ li {
 .form {
 	display: flex;
 	flex-direction: row;
+    width: 100%;
 }
 
 .yelp-img {
