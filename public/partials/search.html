@@ -4,9 +4,15 @@
         <h2 style="margin-top: 5px;">Search for Bars Near You and RSVP</h2>
     </div>
 
-    <div class="row searches">
+ <!--   <div class="row searches">
        
-            <form class="form" ng-submit="getLocalBusinesses();">
+           
+    </div>-->
+
+
+
+    <div class="row content">
+         <form class="form" ng-submit="getLocalBusinesses();">
                  <div class="item1">
                 <input type="text" class="form-control" ng-model="location" id="locationText" placeholder="Enter city or zipcode">
                 </div>
@@ -21,11 +27,6 @@
                     </div>
                 </div>
             </div>
-    </div>
-
-
-
-    <div class="row content">
         <div class="outer-square" ng-repeat="bar in bars">
             <div class="inner-square">
                 <div class="item">

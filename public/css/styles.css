@@ -37,6 +37,14 @@ li {
   flex-wrap: wrap;
 }
 
+.content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
 .item1 {
   width: 65%;
   height: 35px;
@@ -62,13 +70,7 @@ li {
 }
 
 
-.content {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
+
 
 .form {
 	display: flex;
