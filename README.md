@@ -15,7 +15,7 @@ User Story: As an unauthenticated user, when I login I should not have to search
 Hint: Try using the Yelp API to find venues in the cities your users search for. If you use Yelp's API, be sure to mention so in your app.
 
 ## View Project
-[View live demo of Nightlife Coordination App](https://peaceful-mountain-40701.herokuapp.com/)
+[View live demo of Nightlife Coordination App](https://guarded-stream-80093.herokuapp.com/)
 
 ## Technologies
 MEAN Stack - MongoDB, Express, Angular (1.6.4), Node.JS
