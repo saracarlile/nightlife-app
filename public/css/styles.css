@@ -73,6 +73,7 @@ li {
     width: 300px;
     border: 2px solid #BDBDBD;; 
     border-radius: 2px;
+    margin-bottom: 10px;
 }
 
 .results {
