@@ -4,15 +4,13 @@
         <h2 style="margin-top: 5px;">Search for Bars Near You and RSVP</h2>
     </div>
 
-    <div class="row content">
+    <div class="row searches">
         <div class="col-sm-6">
             <form class="form" ng-submit="getLocalBusinesses();">
                 <input type="text" class="form-control" ng-model="location" id="locationText" placeholder="Enter city or zipcode">
                 <button class="btn btn-primary move-right">Search Local Bars</button>
             </form>
         </div>
-    </div>
-    <div class="row">
         <div ng-show="isLoggedIn">
             <div ng-show="hasSearched" style="margin: 0px 0px 20px;">
                 <button ng-click="getPreviousSearch()" class="btn btn-warning">Get Previous Search</button>

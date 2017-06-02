@@ -8,33 +8,6 @@ body {
   background-color: #CCCCCC;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #B5B5B5;
-}
-
-.footer .container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.footer .container p {
-   margin-top: 20px;
-}
-
-.footer .container p a {
-   color: #777;
-} 
-
-.footer .container p a:hover {
-   color: #333;
-} 
-
 .navbar-default {
     background-color: #B5B5B5;
     border-color: #969696;
@@ -52,6 +25,18 @@ li {
     flex-direction: column;
     text-align: center;
     margin-bottom: 20px;
+}
+
+
+.searches {
+  display: flex;
+  width: 86vw;
+  height: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  background: #232323;
+  /* Added */
 }
 
 
@@ -102,3 +87,30 @@ li {
   align-items: center;
 }
 
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #B5B5B5;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer .container p {
+   margin-top: 20px;
+}
+
+.footer .container p a {
+   color: #777;
+} 
+
+.footer .container p a:hover {
+   color: #333;
+} 
