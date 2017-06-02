@@ -40,17 +40,13 @@ li {
 
 .item1 {
   width: 65%;
-  /* Modified */
   height: 35px;
-  background: #4add69;
   margin-bottom: 10px;
 
 }
 .item2 {
   width: 32%;
-  /* Modified */
   height: 35px;
-  background: #4add69;
   margin-bottom: 10px;
 }
 .item1 {
@@ -63,7 +59,6 @@ li {
 .item3 {
   width: 100%;
   height: 35px;
-  background: #d56c6c;
   margin-right: 10px;
 }
 
