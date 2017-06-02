@@ -5,17 +5,22 @@
     </div>
 
     <div class="row searches">
-        <div class="col-sm-6">
+       
             <form class="form" ng-submit="getLocalBusinesses();">
+                 <div class="item1">
                 <input type="text" class="form-control" ng-model="location" id="locationText" placeholder="Enter city or zipcode">
+                </div>
+                <div class="item2">
                 <button class="btn btn-primary move-right">Search Local Bars</button>
+                </div>
             </form>
-        </div>
-        <div ng-show="isLoggedIn">
-            <div ng-show="hasSearched" style="margin: 0px 0px 20px;">
-                <button ng-click="getPreviousSearch()" class="btn btn-warning">Get Previous Search</button>
+            <div class="item3"> 
+                <div ng-show="isLoggedIn">
+                    <div ng-show="hasSearched" style="margin: 0px 0px 20px;">
+                        <button ng-click="getPreviousSearch()" class="btn btn-warning">Get Previous Search</button>
+                    </div>
+                </div>
             </div>
-        </div>
     </div>
 
 

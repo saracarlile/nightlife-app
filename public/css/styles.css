@@ -30,13 +30,41 @@ li {
 
 .searches {
   display: flex;
-  width: 86vw;
+  width: 70vw;
   height: auto;
   box-sizing: border-box;
   margin: 0 auto;
   flex-wrap: wrap;
   background: #232323;
-  /* Added */
+}
+
+.item1 {
+  width: 58%;
+  /* Modified */
+  height: 10vw;
+  background: #4add69;
+  margin-bottom: 10px;
+
+}
+.item2 {
+  width: 38%;
+  /* Modified */
+  height: 10vw;
+  background: #4add69;
+  margin-bottom: 10px;
+}
+.item1 {
+  margin-right: 10px;
+}
+.item2 {
+  margin-left: 10px;
+}
+
+.item3 {
+  width: 100%;
+  height: 10vw;
+  background: #d56c6c;
+  margin-right: 10px;
 }
 
 
