@@ -66,7 +66,8 @@ li {
 
 .item3 {
   margin-left: 10px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  margin-top: 10px;
 
 }
 
@@ -78,14 +79,18 @@ li {
 
 .form {
 	display: flex;
-	flex-direction: row;
-    width: 100%;
-    padding: 10px 65px 45px;
+  flex-direction: row;
+  width: 100%;
+  padding: 10px 65px 10px;
+}
+
+.btn {
+  width: 200px;
+  border-radius: 0px;
 }
 
 .yelp-img {
     height: 185px;
-    width: 300px;
     border: 2px solid #BDBDBD;; 
     border-radius: 2px;
     margin-bottom: 10px;
@@ -144,3 +149,9 @@ li {
 .footer .container p a:hover {
    color: #333;
 } 
+
+.form-control {
+  width: 65%;
+  margin: 10px auto;
+  border-radius: 9px;
+}
