@@ -97,8 +97,7 @@ app.controller('LoginCtrl', [
         $rootScope.isLoggedIn = false;
         $scope.login = function () {
             $scope.bars = "";
-            var myEl = angular.element( document.querySelector( '.content' ) );
-            myEl.remove();
+           $scope.apply();
             $facebook.login().then(function () {
                 refresh();
             });
