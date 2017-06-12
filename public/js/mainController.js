@@ -97,7 +97,6 @@ app.controller('LoginCtrl', [
         $rootScope.isLoggedIn = false;
         $scope.login = function () {
             $scope.bars = "";
-            $scope.$apply();
             $facebook.login().then(function () {
                 refresh();
             });
