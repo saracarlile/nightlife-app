@@ -155,3 +155,9 @@ li {
   margin: 10px auto;
   border-radius: 0px;
 }
+
+@media only screen and (max-width: 800px) {
+    .pull-right {
+    float: left;
+    }
+}
