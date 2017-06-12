@@ -158,6 +158,23 @@ li {
 
 @media only screen and (max-width: 800px) {
     .pull-right {
-    float: left !important;
+      float: left !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    h2, .h2 {
+      font-size: 23px;
+    }
+    .btn {
+    width: 150px;
+    }
+    .form-control {
+      width: 100%;
+      margin: 5px auto;
+    } 
+
+    .mobile-nav-fix {
+      margin-left: -6px;
     }
 }
