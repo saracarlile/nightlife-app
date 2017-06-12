@@ -95,8 +95,16 @@ app.controller('LoginCtrl', [
     '$cookies',
     function ($scope, $facebook, $http, $rootScope, $cookies) {
         $rootScope.isLoggedIn = false;
+        $scope.triggerChangeWithApply = function () {
+            setTimeout(function () {
+                console.log('$Scope.bars being reset');
+                $scope.$apply(function () {
+                    $scope.bars = '';
+                }
+                )
+            }, 500);
+        };
         $scope.login = function () {
-            $scope.bars = "";
             $facebook.login().then(function () {
                 refresh();
             });
