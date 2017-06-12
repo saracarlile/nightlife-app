@@ -61,6 +61,7 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
 
 
     $scope.addGoing = function (barName) {
+        console.log($rootScope.displayName + "display name!");
         $http({
             method: 'POST',
             url: '/join',
