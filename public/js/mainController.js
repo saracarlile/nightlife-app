@@ -61,7 +61,6 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
 
 
     $scope.addGoing = function (barName) {
-        console.log($rootScope.displayName + "display name!");
         $http({
             method: 'POST',
             url: '/join',
@@ -97,6 +96,7 @@ app.controller('LoginCtrl', [
     function ($scope, $facebook, $http, $rootScope, $cookies) {
         $rootScope.isLoggedIn = false;
         $scope.login = function () {
+            $scope.bars = "";
             $facebook.login().then(function () {
                 refresh();
             });

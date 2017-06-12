@@ -29,10 +29,6 @@ module.exports = function (app) {
         Bar.find({ "name": thisBar }, { 'users': username })
             .exec(function (err, bar) {
                 if (bar) {
-                    console.log("bar exists add going!");
-                    console.log(bar);
-                    console.log(bar[0]);
-                    console.log(bar[0]["users"]);
                     if (bar[0]["users"].indexOf(username) < 0 ) { //if user is not added to bar 
                         Bar.findOneAndUpdate({"name": thisBar}, {$push: {"users": username}}, {new: true}, function (err, bar) {  // user was added to bar list
                             if (err) {
