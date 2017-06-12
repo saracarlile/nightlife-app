@@ -28,7 +28,7 @@
             </div>
             <ul class="nav navbar-nav pull-right">
                 <li style="margin: 15px 8px;" ng-show="isLoggedIn">{{welcomeMsg}}</li>
-                <li><a ng-click="login(), triggerChangeWithApply()" ng-hide="isLoggedIn">Log In with Facebook</a></li>
+                <li><a ng-click="login(); triggerChangeWithApply()" ng-hide="isLoggedIn">Log In with Facebook</a></li>
                 <li class="mobile-nav-fix"><a ng-click="logout()" ng-show="isLoggedIn">Log Out</a></li>
             </ul>
         </div>
