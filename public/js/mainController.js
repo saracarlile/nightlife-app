@@ -24,11 +24,9 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
 
          $scope.triggerChangeWithApply = function () {
             setTimeout(function () {
-                console.log('$Scope.bars being reset');
+                console.log('$scope.bars being reset');
+                console.log($scope.bars);
                 $scope.$apply(function () {
-                    console.log($scope.bars);
-                $scope.bars = '';
-
                 /*    $scope.myform = {
                         foo: '',
                         bar: ''
