@@ -22,10 +22,8 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
 
         if ($scope.location === "") { return; }
 
-         $scope.triggerChangeWithApply = function () {
+         $scope.triggerChangeWithApply = function () {  //delete $scope.bars to clear previous search results
             setTimeout(function () {
-                console.log('$scope.bars being reset');
-                console.log($scope.bars);
                 $scope.$apply(function () {
                 delete $scope.bars;
                 }
