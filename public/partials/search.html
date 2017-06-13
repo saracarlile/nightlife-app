@@ -28,7 +28,7 @@
 
 
 
-    <div class="row content">
+    <div class="row content" ng-hide="isLoggedIn">
         <div class="outer-square" ng-repeat="bar in bars">
             <div class="inner-square">
                 <div class="item">
@@ -42,8 +42,34 @@
                             {{bar.rating}}
                             <br> Price: {{bar.price}} <br>
                         </address>
-                        <div ng-show="isLoggedIn">
-                            <div ng-show="authSearchDone">
+                        <div ng-hide="isLoggedIn">
+                            <div ng-hide="authSearchDone">
+                                <button ng-show="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-success">Remove RSVP</button>
+                                <button ng-hide="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-primary">RSVP</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row content" ng-show="isLoggedIn authSearchDone">
+        <div class="outer-square" ng-repeat="bar in bars">
+            <div class="inner-square">
+                <div class="item">
+                    <div>
+                        <img class="yelp-img img-responsive" ng-src="{{bar.image_url}}">
+                    </div>
+                    <div>
+                        <address>
+                            <strong>{{bar.name}}</strong><br> {{bar.location.address1}} {{bar.location.address2}}<br> {{bar.location.city}},
+                            {{bar.location.state}} {{bar.location.zip_code}} <br> Phone: {{bar.display_phone}} <br> Rating:
+                            {{bar.rating}}
+                            <br> Price: {{bar.price}} <br>
+                        </address>
+                        <div>
+                            <div>
                                 <button ng-show="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-success">Remove RSVP</button>
                                 <button ng-hide="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-primary">RSVP</button>
                             </div>
