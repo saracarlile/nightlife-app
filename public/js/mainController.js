@@ -27,7 +27,7 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
                 delete $scope.bars;
                 }
                 )
-            }, 100);
+            }, 10);
         };
 
 
