@@ -1,6 +1,7 @@
 app.controller('mainController', function ($scope, $http, $location, $rootScope, $cookies) {
     $scope.location = "";
     $scope.bars = "";
+     $scope.authSearchDone = false;
 
     $scope.getPreviousSearch = function () {  //gets previous search saved into cookie using $cookies
 
@@ -50,7 +51,8 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
                 });
         }
         else {
-             $scope.authSearchDone = true;
+            
+            $scope.authSearchDone = false;
 
             $http.post('/bars/search/nonauth', Indata).  //unauthenticated search
                 then(function (data, status) {
