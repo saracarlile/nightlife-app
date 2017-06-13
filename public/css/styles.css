@@ -160,6 +160,10 @@ li {
   border-radius: 0px;
 }
 
+.instructions {
+  margin-top: 8px;
+}
+
 @media only screen and (max-width: 800px) {
     .pull-right {
       float: left !important;
