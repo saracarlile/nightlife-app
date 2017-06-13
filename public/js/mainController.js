@@ -99,7 +99,12 @@ app.controller('LoginCtrl', [
             setTimeout(function () {
                 console.log('$Scope.bars being reset');
                 $scope.$apply(function () {
-                    $scope.bars = '';
+                    console.log($scope.bars);
+
+                /*    $scope.myform = {
+                        foo: '',
+                        bar: ''
+                    };*/
                 }
                 )
             }, 500);
