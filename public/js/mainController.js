@@ -22,6 +22,22 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
 
         if ($scope.location === "") { return; }
 
+         $scope.triggerChangeWithApply = function () {
+            setTimeout(function () {
+                console.log('$Scope.bars being reset');
+                $scope.$apply(function () {
+                    console.log($scope.bars);
+                $scope.bars = '';
+
+                /*    $scope.myform = {
+                        foo: '',
+                        bar: ''
+                    };*/
+                }
+                )
+            }, 500);
+        };
+
         var Indata = { 'location': $scope.location, 'seeker': $rootScope.displayName };
         var location = $scope.location;
 
@@ -95,20 +111,6 @@ app.controller('LoginCtrl', [
     '$cookies',
     function ($scope, $facebook, $http, $rootScope, $cookies) {
         $rootScope.isLoggedIn = false;
-        $scope.triggerChangeWithApply = function () {
-            setTimeout(function () {
-                console.log('$Scope.bars being reset');
-                $scope.$apply(function () {
-                    console.log($scope.bars);
-
-                /*    $scope.myform = {
-                        foo: '',
-                        bar: ''
-                    };*/
-                }
-                )
-            }, 500);
-        };
         $scope.login = function () {
             $facebook.login().then(function () {
                 refresh();
