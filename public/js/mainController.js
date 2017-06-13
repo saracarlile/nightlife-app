@@ -22,19 +22,12 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
 
         if ($scope.location === "") { return; }
 
-         $scope.triggerChangeWithApply = function () {  //delete $scope.bars to clear previous search results
-            setTimeout(function () {
-                $scope.$apply(function () {
-                delete $scope.bars;
-                }
-                )
-            }, 100);
-        };
-
         var Indata = { 'location': $scope.location, 'seeker': $rootScope.displayName };
         var location = $scope.location;
 
         if ($rootScope.isLoggedIn === true) {  // if user is authenticated
+            
+            $scope.authSearchDone = true;
 
             $http.post('/bars/search', Indata).  //authenticated search - bars saved to DB
                 then(function (data, status) {
@@ -57,6 +50,8 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
                 });
         }
         else {
+             $scope.authSearchDone = true;
+
             $http.post('/bars/search/nonauth', Indata).  //unauthenticated search
                 then(function (data, status) {
                     $scope.bars = data.data["businesses"];
