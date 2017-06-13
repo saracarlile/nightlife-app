@@ -37,6 +37,10 @@ li {
   flex-wrap: wrap;
 }
 
+.navbar {
+    border-radius: 0px;
+}
+
 .content {
     display: flex;
     justify-content: center;
