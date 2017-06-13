@@ -1,9 +1,4 @@
 <div class="container-fluid">
-    <!--   <div class="title">
-        <h2><i class="fa fa-map-marker"></i><i class="fa fa-cab"></i><i class="fa fa-glass"></i></h2>
-        <h2 style="margin-top: 5px;">Search for Bars Near You and RSVP</h2>
-    </div> -->
-
     <div class="row title">
         <div class="item4">
             <h2><i class="fa fa-map-marker"></i><i class="fa fa-cab"></i><i class="fa fa-glass"></i></h2>
@@ -14,8 +9,6 @@
         </form>
         <div class="item3">
             <button class="btn btn-primary" ng-click="getLocalBusinesses()">Search Local Bars</button>
-            <p class="instructions" ng-hide="authSearchDone">Search without logging in -- login then search or get previous search to RSVP</p>
-                                          
         </div>
         <div class="item3">
             <div ng-show="isLoggedIn">
@@ -28,7 +21,7 @@
 
 
 
-    <div class="row content" ng-hide="isLoggedIn">
+    <div class="row content" ng-hide="isLoggedIn"> <!-- hide search results without RSVP button if not logged in -->
         <div class="outer-square" ng-repeat="bar in bars">
             <div class="inner-square">
                 <div class="item">
@@ -42,19 +35,13 @@
                             {{bar.rating}}
                             <br> Price: {{bar.price}} <br>
                         </address>
-                        <!--<div ng-hide="isLoggedIn">
-                            <div ng-hide="authSearchDone">
-                                <button ng-show="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-success">Remove RSVP</button>
-                                <button ng-hide="bar.users.indexOf(displayName) >= 0" ng-click="addGoing(bar.name)" class="btn btn-primary">RSVP</button>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="row content" ng-show="authSearchDone">
+  
+    <div class="row content" ng-show="authSearchDone">  <!-- show search results with RSVP button if logged in -->
         <div class="outer-square" ng-repeat="bar in bars">
             <div class="inner-square">
                 <div class="item">
