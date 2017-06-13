@@ -27,13 +27,10 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
                 console.log('$scope.bars being reset');
                 console.log($scope.bars);
                 $scope.$apply(function () {
-                /*    $scope.myform = {
-                        foo: '',
-                        bar: ''
-                    };*/
+                delete $scope.bars;
                 }
                 )
-            }, 500);
+            }, 100);
         };
 
         var Indata = { 'location': $scope.location, 'seeker': $rootScope.displayName };
