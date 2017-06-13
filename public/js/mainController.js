@@ -19,6 +19,16 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
 
     }
 
+     $scope.triggerChangeWithApply = function () {
+            setTimeout(function () {
+                $scope.$apply(function () {
+                delete $scope.bars;
+                }
+                )
+            }, 100);
+        };
+
+
     $scope.getLocalBusinesses = function (location) {
 
         if ($scope.location === "") { return; }
@@ -65,6 +75,7 @@ app.controller('mainController', function ($scope, $http, $location, $rootScope,
         }
     }
 
+   
 
     $scope.addGoing = function (barName) {
         $http({
