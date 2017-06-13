@@ -14,7 +14,10 @@
         </form>
         <div class="item3">
             <button class="btn btn-primary" ng-click="getLocalBusinesses()">Search Local Bars</button>
-            <p ng-hide="authSearchDone">Log in then search to RSVP</p>                               
+                                          
+        </div>
+        <div class="item3" ng-hide="authSearchDone">
+            <p class="instructions">Log in then search to RSVP</p> 
         </div>
         <div class="item3">
             <div ng-show="isLoggedIn">

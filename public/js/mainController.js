@@ -1,9 +1,11 @@
 app.controller('mainController', function ($scope, $http, $location, $rootScope, $cookies) {
     $scope.location = "";
     $scope.bars = "";
-     $scope.authSearchDone = false;
+     $scope.authSearchDone = false; // non-authenticated searches cannot RSVP
 
     $scope.getPreviousSearch = function () {  //gets previous search saved into cookie using $cookies
+
+         $scope.authSearchDone = true; //authenticated search done
 
         var prevSearch = $cookies.get('search');
         var Indata = { 'location': prevSearch, 'seeker': $rootScope.displayName };
